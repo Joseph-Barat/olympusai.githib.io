@@ -253,23 +253,22 @@
                                             <input class="company-ai w-input" maxlength="256" name="Company" data-name="Company" placeholder="Company*" type="text" id="Company" required=""/>
                                         </div>
                                         
-                                        <!-- ENHANCED PHONE INPUT WITH COUNTRY DETECTION - iOS FRIENDLY WITH PROPER PADDING -->
+                                        <!-- ENHANCED PHONE INPUT WITH COUNTRY DETECTION - SORTED A-Z with USA at top -->
                                         <div class="third-layer-ai-phone">
                                             <select id="countryCodeSelect" class="country-select">
-                                                <option value="971" data-digits="9">🇦🇪 UAE +971</option>
-                                                <option value="43" data-digits="10">🇦🇹 Austria +43</option>
+                                                <!-- United States/Canada at the top -->
+                                                <option value="1" data-digits="10">🇺🇸 United States/Canada +1</option>
+                                                <!-- All other countries sorted alphabetically by country name -->
                                                 <option value="61" data-digits="9">🇦🇺 Australia +61</option>
+                                                <option value="43" data-digits="10">🇦🇹 Austria +43</option>
                                                 <option value="880" data-digits="10">🇧🇩 Bangladesh +880</option>
                                                 <option value="32" data-digits="9">🇧🇪 Belgium +32</option>
                                                 <option value="55" data-digits="10">🇧🇷 Brazil +55</option>
-                                                <option value="41" data-digits="9">🇨🇭 Switzerland +41</option>
                                                 <option value="86" data-digits="11">🇨🇳 China +86</option>
-                                                <option value="49" data-digits="10">🇩🇪 Germany +49</option>
                                                 <option value="20" data-digits="10">🇪🇬 Egypt +20</option>
-                                                <option value="34" data-digits="9">🇪🇸 Spain +34</option>
                                                 <option value="358" data-digits="9">🇫🇮 Finland +358</option>
                                                 <option value="33" data-digits="9">🇫🇷 France +33</option>
-                                                <option value="44" data-digits="10">🇬🇧 United Kingdom +44</option>
+                                                <option value="49" data-digits="10">🇩🇪 Germany +49</option>
                                                 <option value="30" data-digits="10">🇬🇷 Greece +30</option>
                                                 <option value="36" data-digits="9">🇭🇺 Hungary +36</option>
                                                 <option value="62" data-digits="10">🇮🇩 Indonesia +62</option>
@@ -283,25 +282,28 @@
                                                 <option value="82" data-digits="10">🇰🇷 South Korea +82</option>
                                                 <option value="94" data-digits="9">🇱🇰 Sri Lanka +94</option>
                                                 <option value="212" data-digits="9">🇲🇦 Morocco +212</option>
-                                                <option value="52" data-digits="10">🇲🇽 Mexico +52</option>
                                                 <option value="60" data-digits="9">🇲🇾 Malaysia +60</option>
-                                                <option value="234" data-digits="10">🇳🇬 Nigeria +234</option>
+                                                <option value="52" data-digits="10">🇲🇽 Mexico +52</option>
                                                 <option value="31" data-digits="9">🇳🇱 Netherlands +31</option>
-                                                <option value="47" data-digits="8">🇳🇴 Norway +47</option>
                                                 <option value="64" data-digits="9">🇳🇿 New Zealand +64</option>
-                                                <option value="63" data-digits="10">🇵🇭 Philippines +63</option>
+                                                <option value="234" data-digits="10">🇳🇬 Nigeria +234</option>
+                                                <option value="47" data-digits="8">🇳🇴 Norway +47</option>
                                                 <option value="92" data-digits="10">🇵🇰 Pakistan +92</option>
+                                                <option value="63" data-digits="10">🇵🇭 Philippines +63</option>
                                                 <option value="48" data-digits="9">🇵🇱 Poland +48</option>
                                                 <option value="351" data-digits="9">🇵🇹 Portugal +351</option>
                                                 <option value="40" data-digits="9">🇷🇴 Romania +40</option>
                                                 <option value="7" data-digits="10">🇷🇺 Russia +7</option>
                                                 <option value="966" data-digits="9">🇸🇦 Saudi Arabia +966</option>
+                                                <option value="27" data-digits="9">🇿🇦 South Africa +27</option>
+                                                <option value="34" data-digits="9">🇪🇸 Spain +34</option>
                                                 <option value="46" data-digits="9">🇸🇪 Sweden +46</option>
+                                                <option value="41" data-digits="9">🇨🇭 Switzerland +41</option>
                                                 <option value="66" data-digits="9">🇹🇭 Thailand +66</option>
                                                 <option value="90" data-digits="10">🇹🇷 Turkey +90</option>
-                                                <option value="1" data-digits="10">🇺🇸 United States/Canada +1</option>
+                                                <option value="971" data-digits="9">🇦🇪 UAE +971</option>
+                                                <option value="44" data-digits="10">🇬🇧 United Kingdom +44</option>
                                                 <option value="84" data-digits="9">🇻🇳 Vietnam +84</option>
-                                                <option value="27" data-digits="9">🇿🇦 South Africa +27</option>
                                             </select>
                                             <input class="phone-number-ai w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="Phone Number*" type="tel" id="Phone" required/>
                                             <input type="hidden" id="fullPhoneNumber" name="fullPhoneNumber" />
@@ -318,7 +320,6 @@
                                             <div class="grid">
                                                 <label class="w-checkbox checkbox-field-2">
                                                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                    <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                     <input type="hidden" name="Ai-sales-Deveolpment" value="false"/>
                                                     <input type="checkbox" id="Ai-sales-Deveolpment" name="Ai-sales-Deveolpment" data-name="Ai sales Deveolpment" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                     <h1 class="heading-398">AI Sales development rep</h1>
@@ -326,7 +327,6 @@
                                                 </label>
                                                 <label class="w-checkbox checkbox-field-3">
                                                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                    <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                     <input type="hidden" name="AI-customer-support-agent" value="false"/>
                                                     <input type="checkbox" id="AI-customer-support-agent" name="AI-customer-support-agent" data-name="AI customer support agent" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                     <h1 class="heading-398">AI customer support agent</h1>
@@ -334,7 +334,6 @@
                                                 </label>
                                                 <label class="w-checkbox checkbox-field-4">
                                                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                    <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                     <input type="hidden" name="AI-back-office-agent" value="false"/>
                                                     <input type="checkbox" id="AI-back-office-agent" name="AI-back-office-agent" data-name="AI back-office agent" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                     <h1 class="heading-398">AI back-office agent</h1>
@@ -342,7 +341,6 @@
                                                 </label>
                                                 <label class="w-checkbox checkbox-field-5">
                                                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                    <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                     <input type="hidden" name="Ai-Receptionist" value="false"/>
                                                     <input type="checkbox" id="Ai-Receptionist" name="Ai-Receptionist" data-name="Ai Receptionist" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                     <h1 id="w-node-_70049faf-df51-530b-cf7f-897fbafc3d18-bceefc22" class="heading-398">Ai Receptionist</h1>
@@ -352,7 +350,6 @@
                                             <div class="grid">
                                                 <label class="w-checkbox checkbox-field-6">
                                                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                    <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                     <input type="hidden" name="AI-lead-qualification-pipeline" value="false"/>
                                                     <input type="checkbox" id="AI-lead-qualification-pipeline" name="AI-lead-qualification-pipeline" data-name="AI lead qualification pipeline" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                     <h1 class="heading-398">AI lead qualification pipeline</h1>
@@ -360,7 +357,6 @@
                                                 </label>
                                                 <label class="w-checkbox checkbox-field-7">
                                                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                    <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                     <input type="hidden" name="AI-executive-reporting" value="false"/>
                                                     <input type="checkbox" id="AI-executive-reporting" name="AI-executive-reporting" data-name="AI executive reporting" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                     <h1 class="heading-398">AI executive reporting</h1>
@@ -368,14 +364,12 @@
                                                 </label>
                                                 <label class="w-checkbox checkbox-field-8">
                                                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                    <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                     <input type="hidden" name="custom-ai-agent-automation-solution" value="false"/>
                                                     <input type="checkbox" id="custom-ai-agent-automation-solution" name="custom-ai-agent-automation-solution" data-name="custom ai agent/automation solution" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                     <h1 class="heading-398">custom ai agent/automation solution</h1>
                                                     <span class="checkbox-label-3 w-form-label" for="custom-ai-agent-automation-solution">custom ai agent/automation solution</span>
                                                 </label>
                                             </div>
-                                            <!-- Mobile duplicate - hidden field only, no extra checkbox to avoid duplicate submissions -->
                                             <label class="w-checkbox checkbox-field-8-mobile">
                                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
                                                 <input type="checkbox" name="custom-ai-agent-automation-solution-mobile" id="custom-ai-agent-automation-solution-mobile" data-name="custom ai agent/automation solution" value="true" style="opacity:0;position:absolute;z-index:-1"/>
@@ -395,7 +389,6 @@
                                         <div class="grid">
                                             <label class="w-checkbox checbox-price-1">
                                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                 <input type="hidden" name="1k---3k" value="false"/>
                                                 <input type="checkbox" id="1k---3k" name="1k---3k" data-name="$1k - $3k" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                 <h1 class="heading-398">$1k - $3k</h1>
@@ -403,7 +396,6 @@
                                             </label>
                                             <label class="w-checkbox checbox-price-1">
                                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                 <input type="hidden" name="3k---5k" value="false"/>
                                                 <input type="checkbox" id="3k---5k" name="3k---5k" data-name="$3k - $5k" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                 <h1 class="heading-398">$3k - $5k</h1>
@@ -411,7 +403,6 @@
                                             </label>
                                             <label class="w-checkbox checbox-price-1">
                                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                 <input type="hidden" name="5k---10k" value="false"/>
                                                 <input type="checkbox" id="5k---10k" name="5k---10k" data-name="$5k - $10k" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                 <h1 class="heading-398">$5k - $10k</h1>
@@ -419,7 +410,6 @@
                                             </label>
                                             <label class="w-checkbox checbox-price-1">
                                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                 <input type="hidden" name="10k---50k" value="false"/>
                                                 <input type="checkbox" id="10k---50k" name="10k---50k" data-name="$10k - $50k" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                 <h1 class="heading-398">$10k - $50k</h1>
@@ -427,7 +417,6 @@
                                             </label>
                                             <label class="w-checkbox checbox-price-1">
                                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                                 <input type="hidden" name="Unlimited" value="false"/>
                                                 <input type="checkbox" id="Unlimited" name="Unlimited" data-name="Unlimited" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                 <h1 class="heading-398">Unlimited</h1>
@@ -436,7 +425,6 @@
                                         </div>
                                         <label class="w-checkbox checkbox-field-9">
                                             <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-4 w--redirected-checked"></div>
-                                            <!-- FIX: hidden field sends "false" when checkbox is unchecked -->
                                             <input type="hidden" name="Privacy-policy" value="false"/>
                                             <input type="checkbox" id="Privacy-policy" name="Privacy-policy" data-name="Privacy policy" value="true" style="opacity:0;position:absolute;z-index:-1" checked=""/>
                                             <span class="checkbox-label-4 w-form-label" for="Privacy-policy">
