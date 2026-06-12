@@ -25,16 +25,28 @@
                 background: #fff;
                 border: 1px solid #cacaca;
                 border-radius: 7px;
-                padding: 0.75rem 1rem;
+                padding: 0.75rem 2rem 0.75rem 1rem;
                 color: #0e1b30;
                 font-size: 0.9em;
                 font-family: 'Inter 18 Pt regular', Arial, sans-serif;
                 cursor: pointer;
                 outline: none;
                 min-width: 140px;
+                /* iOS fix - removes native styling to allow custom padding */
+                -webkit-appearance: none;
+                appearance: none;
+                /* Custom dropdown arrow */
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%230e1b30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+                background-repeat: no-repeat;
+                background-position: right 1rem center;
+                background-size: 14px;
             }
             .country-select:focus {
                 border-color: #2c5496;
+            }
+            /* Override iOS default select styling completely */
+            .country-select::-ms-expand {
+                display: none;
             }
             @media screen and (max-width: 767px) {
                 .third-layer-ai-phone {
@@ -43,7 +55,7 @@
                 }
                 .country-select {
                     width: 100%;
-                    padding: 0.75rem 1rem;
+                    padding: 0.75rem 2rem 0.75rem 1rem;
                 }
             }
 
@@ -244,7 +256,7 @@
                                             <input class="company-ai w-input" maxlength="256" name="Company" data-name="Company" placeholder="Company*" type="text" id="Company" required=""/>
                                         </div>
                                         
-                                        <!-- ENHANCED PHONE INPUT WITH COUNTRY DETECTION - MATCHING DESIGN PERFECTLY -->
+                                        <!-- ENHANCED PHONE INPUT WITH COUNTRY DETECTION - iOS FRIENDLY WITH PROPER PADDING -->
                                         <div class="third-layer-ai-phone">
                                             <select id="countryCodeSelect" class="country-select">
                                                 <option value="90" data-digits="10">🇹🇷 Turkey +90</option>
