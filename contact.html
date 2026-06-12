@@ -11,7 +11,48 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
         <link href="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/css/olympusai.webflow.shared.1c2751637.css" rel="stylesheet" type="text/css" integrity="sha384-HCdRY3p7tqsO5lMC+PGAegdQ9xebB4blei/81JWjipPd9hK9jpdTAivkSLaVyCvt" crossorigin="anonymous"/>
-        <style>
+
+
+
+<!-- Page Transition Styles (Add to your <style> section or CSS file) -->
+<style>
+  /* Enable View Transitions API */
+  @view-transition {
+    navigation: auto;
+  }
+
+  /* Define the exit (old page) animation */
+  @keyframes move-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.4;
+    }
+  }
+
+  /* Define the entry (new page) animation */
+  @keyframes move-in {
+    from {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    }
+    to {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+  }
+
+  /* Apply animation to the outgoing page */
+  ::view-transition-old(root) {
+    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-out;
+  }
+
+  /* Apply animation to the incoming page */
+  ::view-transition-new(root) {
+    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-in;
+  }
+
+
+        
             /* Additional styles for phone detector - matching existing design exactly */
             .third-layer-ai-phone {
                 display: flex;
@@ -747,5 +788,43 @@
                 }
             });
         </script>
+
+
+
+
+
+<script>
+  // Optional: JavaScript for handling the transition when links are clicked
+  // This script ensures the transition runs for same-origin links.
+  // It's already present in your original code, but here it is for clarity.
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    // Intercept all link clicks to use View Transitions API
+    document.body.addEventListener("click", (event) => {
+      let link = event.target.closest("a");
+      
+      // Check if the clicked element is a valid link to a page on the same origin
+      if (link && link.href && link.origin === window.location.origin && link.pathname !== window.location.pathname) {
+        // Prevent default navigation
+        event.preventDefault();
+        
+        const url = link.href;
+        
+        // Use View Transitions API if supported, otherwise fallback to normal navigation
+        if (document.startViewTransition) {
+          document.startViewTransition(() => {
+            window.location.href = url;
+          });
+        } else {
+          window.location.href = url;
+        }
+      }
+    });
+  });
+</script>
+
+
+
+        
     </body>
 </html>
