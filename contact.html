@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
-<!-- Last Published: Fri May 15 2026 16:18:18 GMT+0000 (Coordinated Universal Time) -->
+<!-- Last Published: Wed Jun 24 2026 09:49:20 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="olympusai.webflow.io" data-wf-page="69d152126a180ac5bceefc22" data-wf-site="69d152126a180ac5bceefc29" data-wf-status="1" lang="en">
     <head>
         <meta charset="utf-8"/>
         <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"/>
-        <title>Contact Us | OlympusAI</title>
+        <title>Contact Us - Olympus Ai</title>
         <meta content="Contact Us" property="og:title"/>
-        <meta content="Contact Us" property="twitter:title"/>
+        <meta content="Contact Us" name="twitter:title"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
-        <link href="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/css/olympusai.webflow.shared.1c2751637.css" rel="stylesheet" type="text/css" integrity="sha384-HCdRY3p7tqsO5lMC+PGAegdQ9xebB4blei/81JWjipPd9hK9jpdTAivkSLaVyCvt" crossorigin="anonymous"/>
+        <link href="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/css/olympusai.webflow.shared.fcb3d0095.css" rel="stylesheet" type="text/css" integrity="sha384-/LPQCVqplBQtSC7ydIobEjkoNxI2ii+BXQy3T2QubNXkV/Z1Zv6RN3hUI2Ubdra2" crossorigin="anonymous"/>
+        
+
+
 
 
 <!-- Paste this right before your closing </head> tag -->
@@ -25,47 +28,15 @@
   })
 
 </script>
-        
-
-<!-- Page Transition Styles (Add to your <style> section or CSS file) -->
-<style>
-  /* Enable View Transitions API */
-  @view-transition {
-    navigation: auto;
-  }
-
-  /* Define the exit (old page) animation */
-  @keyframes move-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0.4;
-    }
-  }
-
-  /* Define the entry (new page) animation */
-  @keyframes move-in {
-    from {
-      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-    }
-    to {
-      clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
-    }
-  }
-
-  /* Apply animation to the outgoing page */
-  ::view-transition-old(root) {
-    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-out;
-  }
-
-  /* Apply animation to the incoming page */
-  ::view-transition-new(root) {
-    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-in;
-  }
 
 
-        
+
+
+
+
+
+        <!-- ADDED: Phone detector styles from test 2 -->
+        <style>
             /* Additional styles for phone detector - matching existing design exactly */
             .third-layer-ai-phone {
                 display: flex;
@@ -110,11 +81,136 @@
                 }
             }
 
-            /* Hide Webflow badge completely */
-            .w-webflow-badge, .w-webflow-badge > img {
+            /*selection*/
+            ::selection {
+                background: #E8E8E8;
+                color: #121212;
+                text-shadow: none;
+            }
+
+            /*hide webflow badge*/
+            .w-webflow-badge {
                 display: none !important;
             }
+
+            /*preloader*/
+            .preloader {
+                display: flex;
+            }
+
+            .w-editor .preloader {
+                display: none;
+            }
+
+            /*transitions*/
+            body .transition {
+                display: block
+            }
+
+            .w-editor .transition {
+                display: none;
+            }
+
+            .no-scroll-transition {
+                overflow: hidden;
+                position: relative;
+            }
+
+            /*true 100vh*/
+            .viewport {
+                height: calc(var(--vh, 1vh) * 100) !important;
+            }
+
+            /*cursor*/
+            body:hover .cursor {
+                opacity: 1.0;
+            }
+
+            .cursor {
+                pointer-events: none;
+            }
+
+            /*text smoothing*/
+            text-rendering: optimizeLegibility; body {
+                -webkit-font-smoothing: antialiased;
+            }
         </style>
+        <style>
+            /*lenis -- IMPORTANT*/
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            #scrollWrapper {
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            #scrollContent {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+            }
+        </style>
+
+
+
+
+
+
+
+<!-- Page Transition Styles (Add to your <style> section or CSS file) -->
+<style>
+  /* Enable View Transitions API */
+  @view-transition {
+    navigation: auto;
+  }
+
+  /* Define the exit (old page) animation */
+  @keyframes move-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.4;
+    }
+  }
+
+  /* Define the entry (new page) animation */
+  @keyframes move-in {
+    from {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    }
+    to {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+  }
+
+  /* Apply animation to the outgoing page */
+  ::view-transition-old(root) {
+    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-out;
+  }
+
+  /* Apply animation to the incoming page */
+  ::view-transition-new(root) {
+    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-in;
+  }
+</style>
+
+
+
+
+
+
+
+        
+        <!-- ADDED: Turnstile script from test 2 -->
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        
         <script type="text/javascript">
             !function(o, c) {
                 var n = c.documentElement
@@ -129,14 +225,13 @@
         <link href="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/69f64540a6a4125070cd02a7_olympus%20icon%20180.png" rel="apple-touch-icon" sizes="180x180"/>
         <link href="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/69f6454014bb3cc391e26111_olympus%20icon%20180.png" rel="icon" type="image/png" sizes="192x192"/>
         <link href="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/69f64540a54c0760fcc9a172_olympus%20icon%20180.png" rel="icon" type="image/png" sizes="512x512"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
     </head>
     <body class="body-3">
         <div class="ai-nav-bar-2">
             <div class="ai-nav-wrappe-2">
                 <div class="ai-logo-2">
-                    <a href="index.html" class="link-block-12 w-inline-block">
+                    <a href="/" class="link-block-12 w-inline-block">
                         <img src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/69f64ae2812b8328bb2cdf9a_olympus-black.svg" loading="lazy" alt="" class="image-40"/>
                     </a>
                 </div>
@@ -178,18 +273,12 @@
                 </div>
                 <div class="ai-nav-move-button">
                     <div class="button-wrapper">
-                          <div class="small-links">
-                          <h1 class="heading-392-links">
-    <a href="#" target="_blank" rel="noopener noreferrer" style="color: #6b6b6b;">Linkedin</a>
-</h1>
-<h1 class="heading-392-links">
-    <a href="https://www.instagram.com/olympusai.agency/" target="_blank" rel="noopener noreferrer" style="color: #6b6b6b;">Instagram</a>
-</h1>
-<h1 class="heading-392-links">
-    <a href="https://x.com/olympusaiagency" target="_blank" rel="noopener noreferrer" style="color: #6b6b6b;">X.com</a>
-</h1>
+                        <div class="small-links">
+                            <h1 class="heading-392-links">Linkedin</h1>
+                            <h1 class="heading-392-links">Instagram</h1>
+                            <h1 class="heading-392-links">X.com</h1>
                         </div>
-                        <a href="contact.html" aria-current="page" class="link-block-ai-1-blue w-inline-block w--current">
+                        <a href="/contact-us" aria-current="page" class="link-block-ai-1-blue w-inline-block w--current">
                             <div data-w-id="e2102cc3-714a-322d-cd00-d8f9a1d665ac" class="ai-button-1">
                                 <h1 class="ai-head-buttons">Contact Us</h1>
                                 <div class="ai-1-1arrow-wrapper">
@@ -212,7 +301,7 @@
             </div>
         </div>
         <div class="ai-logo-mobile-ya">
-            <a href="index.html" class="w-inline-block">
+            <a href="/" class="w-inline-block">
                 <img src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/69f64ae2812b8328bb2cdf9a_olympus-black.svg" loading="lazy" alt=""/>
             </a>
         </div>
@@ -242,7 +331,7 @@
                         <h1 class="heading-377">Process</h1>
                     </a>
                 </div>
-                <a href="contact.html" aria-current="page" class="w-inline-block w--current">
+                <a href="/contact-us" aria-current="page" class="w-inline-block w--current">
                     <div data-w-id="92042df3-8476-9b96-0a44-d5cc9dfba9bc" class="nav-darkblue-button">
                         <div class="div-block-124">
                             <div class="moving-one">
@@ -291,6 +380,8 @@
                                     <h1 class="heading-397">contact@olympusai.agency</h1>
                                 </div>
                             </div>
+
+                            <!-- REPLACED FORM with test 2 version -->
                             <div class="the-form-block-ai">
                                 <div class="line-ai"></div>
                                 <div class="w-form">
@@ -426,7 +517,6 @@
                                             </div>
                                             <label class="w-checkbox checkbox-field-8-mobile">
                                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-3"></div>
-                                                <input type="hidden" name="custom-ai-agent-automation-solution" value="false"/>
                                                 <input type="checkbox" name="custom-ai-agent-automation-solution-mobile" id="custom-ai-agent-automation-solution-mobile" data-name="custom ai agent/automation solution" value="true" style="opacity:0;position:absolute;z-index:-1"/>
                                                 <h1 class="heading-398">custom ai agent/automation solution</h1>
                                                 <span class="checkbox-label-3 w-form-label" for="custom-ai-agent-automation-solution-mobile">custom ai agent/automation solution</span>
@@ -502,9 +592,13 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="the-logo-big">
                             <div>
                                 <img src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/6a05b39d095a5f6efbde8eb6_Olympus%20icon.svg" loading="lazy" alt="" class="image-42"/>
+                            </div>
+                            <div class="div-block-161">
+                                <img src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/6a3acd77053eedb622ec77fa_right-bottom-decor.webp" loading="lazy" sizes="(max-width: 750px) 100vw, 750px" srcset="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/6a3acd77053eedb622ec77fa_right-bottom-decor-p-500.webp 500w, https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/6a3acd77053eedb622ec77fa_right-bottom-decor.webp 750w" alt="" class="image-52"/>
                             </div>
                         </div>
                     </div>
@@ -513,7 +607,7 @@
             <div class="footer-ai">
                 <div class="footer-ai-wrapper">
                     <div class="div-block-110">
-                        <a href="index.html" class="w-inline-block">
+                        <a href="/" class="w-inline-block">
                             <div>
                                 <h1 class="footer-text-ai">
                                     Back to Home<br/>
@@ -526,7 +620,7 @@
                                     Navigation<br/>
                                 </h1>
                                 <div class="div-block-112">
-                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e43" href="index.html" class="w-inline-block">
+                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e43" href="#" class="w-inline-block">
                                         <h1 class="footer-text-ai">
                                             Home<br/>
                                         </h1>
@@ -551,7 +645,7 @@
                                             Process<br/>
                                         </h1>
                                     </a>
-                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e57" href="contact.html" aria-current="page" class="w-inline-block w--current">
+                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e57" href="/contact-us" aria-current="page" class="w-inline-block w--current">
                                         <h1 class="footer-text-ai">
                                             contact<br/>
                                         </h1>
@@ -563,12 +657,12 @@
                                     Links<br/>
                                 </h1>
                                 <div class="div-block-112">
-                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e60" href="https://www.instagram.com/olympusai.agency/" class="w-inline-block">
+                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e60" href="#" class="w-inline-block">
                                         <h1 class="footer-text-ai">
                                             Instagram<br/>
                                         </h1>
                                     </a>
-                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e64" href="https://x.com/olympusaiagency" class="w-inline-block">
+                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e64" href="#" class="w-inline-block">
                                         <h1 class="footer-text-ai">
                                             X.com<br/>
                                         </h1>
@@ -595,19 +689,19 @@
                             <div class="div-block-117"></div>
                             <div class="div-block-118">
                                 <div class="div-block-121">
-                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e77" href="accessibility-statement.html" class="w-inline-block">
+                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e77" href="#" class="w-inline-block">
                                         <h1 class="footer-text-ai--policy">
                                             Accessibility Statement<br/>
                                         </h1>
                                     </a>
                                 </div>
                                 <div class="div-block-119">
-                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e7c" href="Privacy-statement.html" class="w-inline-block">
+                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e7c" href="#" class="w-inline-block">
                                         <h1 class="footer-text-ai--policy">
                                             Privacy Statement<br/>
                                         </h1>
                                     </a>
-                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e80" href="legal-disclosure.html" class="w-inline-block">
+                                    <a data-w-id="91fbdc99-2500-e955-19a3-d4be7e186e80" href="#" class="w-inline-block">
                                         <h1 class="footer-text-ai--policy">
                                             Legal Disclosure<br/>
                                         </h1>
@@ -633,8 +727,8 @@
                 </div>
             </div>
         </div>
-        
-        <!-- PHONE DETECTOR SCRIPT -->
+
+        <!-- ADDED: PHONE DETECTOR SCRIPT from test 2 -->
         <script>
             (function() {
                 function initPhoneDetector() {
@@ -726,17 +820,224 @@
                 }
             })();
         </script>
-        
+
+        <!-- ADDED: Form submission handler from test 2 -->
+        <script>
+            async function handleFormSubmit(event) {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+
+                const form = event.target;
+                const submitButton = form.querySelector('.submit-button-4');
+                const originalButtonText = submitButton.value;
+                const successMessage = document.querySelector('.success-message-3');
+                const errorMessage = document.querySelector('.error-message-3');
+
+                // Make sure the full phone number is written into the Phone field before collecting data
+                const fullPhone = document.getElementById('fullPhoneNumber')?.value || '';
+                const phoneInput = document.getElementById('Phone');
+                if (phoneInput && fullPhone) {
+                    phoneInput.value = fullPhone;
+                }
+
+                try {
+                    // Show loading state
+                    submitButton.disabled = true;
+                    submitButton.value = 'Submitting...';
+
+                    // Collect form data
+                    const formData = new FormData(form);
+
+                    // Convert to URL-encoded format (what Make.com expects)
+                    const urlEncoded = new URLSearchParams(formData).toString();
+
+                    // Send to Make.com
+                    const response = await fetch('https://hook.eu2.make.com/8ix7s8hwh167gmxuk87ch5o540iilx7a', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: urlEncoded
+                    });
+
+                    // Make.com often returns 302 redirects
+                    // We consider any response under 400 as successful
+                    if (response.status < 400) {
+                        form.style.display = 'none';
+                        successMessage.style.display = 'block';
+                        errorMessage.style.display = 'none';
+                        successMessage.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.value = originalButtonText;
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('email-form');
+                if (form) {
+                    form.removeEventListener('submit', handleFormSubmit);
+                    form.addEventListener('submit', handleFormSubmit);
+                }
+            });
+        </script>
+
         <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69d152126a180ac5bceefc29" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/js/webflow.schunk.a3140c51201be139.js" type="text/javascript" integrity="sha384-r35yfvOfybU/mILj9Tw1FMRySFfkayvZnU401HuWMJTJLdwzFgXRMWr4whQiMCTC" crossorigin="anonymous"></script>
-        <script src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/js/webflow.schunk.cca74d891fb74670.js" type="text/javascript" integrity="sha384-cCvsD/f8OA1p78ebRmFygAJhyXdRmonK6A0ok0T89ij6VYGUAWMUpt296tcHDwkt" crossorigin="anonymous"></script>
-        <script src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/js/webflow.schunk.1349c44797aa5198.js" type="text/javascript" integrity="sha384-cNOOx5Xv973b1InpPBuFC0u+wTYzuqM4dvT5PydzX0Hg4FTRefK8Zz7dGXsWj+K3" crossorigin="anonymous"></script>
-        <script src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/js/webflow.dfe63184.ef9f56a0bcc57709.js" type="text/javascript" integrity="sha384-qcpX9rRi4ZNYUKzIuBOAn/r1A3jFDe+UO0NJioYrX+bLO8nqUlHisCDXMDYrEJoN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/js/webflow.schunk.1dc753494da16c63.js" type="text/javascript" integrity="sha384-VZlXDVpGCb0UZfNaq6nMXRsChCirxDfcrdXDfuP+QAAQDv9RKX22fLedoy13eVVN" crossorigin="anonymous"></script>
+        <script src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/js/webflow.schunk.4f22a301184a031f.js" type="text/javascript" integrity="sha384-4s0XrBDZuK7t7peSMzLYJzCVHbmvx3ZYunLUJjhygMv7FN3kNdDB1JBJrV/52sD8" crossorigin="anonymous"></script>
+        <script src="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/js/webflow.2566d82c.ebe2c468dfd35bdf.js" type="text/javascript" integrity="sha384-FAEWIUBnekzM50ViukDigrOu3DPtoOh9OHIUCGfVQ3J4sNuR60vOq2LxOv55r1Ud" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
         <script data-id-scroll data-autoinit="true" data-duration="1" data-orientation="vertical" data-smoothWheel="true" data-smoothTouch="false" data-touchMultiplier="1.5" data-easing="(t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t))" data-useOverscroll="true" data-useControls="true" data-useAnchor="true" data-useRaf="true" data-infinite="false" defer src="https://cdn.prod.website-files.com/645e0e1ff7fdb6dc8c85f3a2/653b82ecf87f552a98ac66b9_lenis-master-offbrand.02.txt"></script>
         
+    
+    
+    
+    
         <script>
+            let vh = window.innerHeight * 0.01;
+
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+            window.addEventListener('resize', () => {
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+            );
+        </script>
+        <!-- gsap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+        <!-- Lenis Script Controls -->
+        <script data-id-scroll data-autoinit="true" data-duration="1" data-orientation="vertical" data-selector="#scrollContent" data-smoothWheel="true" data-smoothTouch="false" data-touchMultiplier="1.5" data-easing="(t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t))" data-useOverscroll="true" data-useControls="true" data-useAnchor="true" data-useRaf="true" data-infinite="false" defer src="https://cdn.prod.website-files.com/645e0e1ff7fdb6dc8c85f3a2/648b1b0b9d6638f9da912dc2_lenis-offbrand-v2.txt"></script>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+            // give the scrollable content a variable
+            const scrollContent = document.querySelector("#scrollContent");
+
+            gsap.set("[data-left]", {
+                x: "-100%",
+                autoAlpha: 0
+            });
+            // Set initial values
+            gsap.set("[data-right]", {
+                x: "100%",
+                autoAlpha: 0
+            });
+            // Set initial values
+
+            // Function to animate elements from the left
+            function animateFromLeft(element) {
+                gsap.to(element, {
+                    x: "0%",
+                    // end at original position
+                    autoAlpha: 1,
+                    // end at full opacity
+                    duration: 0.5,
+                    // duration of animation
+                    ease: "power1.out"// easing
+                });
+            }
+
+            // Function to animate elements from the right
+            function animateFromRight(element) {
+                gsap.to(element, {
+                    x: "0%",
+                    // end at original position
+                    autoAlpha: 1,
+                    // end at full opacity
+                    duration: 0.5,
+                    // duration of animation
+                    ease: "power1.out"// easing
+                });
+            }
+
+            // Select all elements with the data-left attribute and animate them
+            document.querySelectorAll("[data-left]").forEach( (element) => {
+                ScrollTrigger.create({
+                    trigger: element,
+                    scroller: scrollContent,
+                    // use custom scroll container
+                    start: "top bottom",
+                    // start when element enters the viewport
+                    onEnter: () => animateFromLeft(element),
+                    onLeaveBack: () => gsap.to(element, {
+                        x: "-100%",
+                        autoAlpha: 0,
+                        duration: 0.2
+                    }),
+                    // Reset when element leaves
+                });
+            }
+            );
+
+            // Select all elements with the data-right attribute and animate them
+            document.querySelectorAll("[data-right]").forEach( (element) => {
+                ScrollTrigger.create({
+                    trigger: element,
+                    scroller: scrollContent,
+                    // use custom scroll container
+                    start: "top bottom",
+                    // start when element enters the viewport
+                    onEnter: () => animateFromRight(element),
+                    onLeaveBack: () => gsap.to(element, {
+                        x: "100%",
+                        autoAlpha: 0,
+                        duration: 0.2
+                    }),
+                    // Reset when element leaves
+                });
+            }
+            );
+
+            window.addEventListener("sscroll", (e) => {
+                ScrollTrigger.update();
+            }
+            );
+
+            // copy button function
+            document.addEventListener("DOMContentLoaded", function() {
+                let btnCopy2 = document.querySelector("[btn-copy-2]");
+
+                btnCopy2.addEventListener("click", function() {
+                    copyText(".code2 pre", btnCopy2);
+                });
+
+                function copyText(selector, button) {
+                    let preCode = document.querySelector(selector).innerHTML;
+
+                    navigator.clipboard.writeText(preCode).then( () => {
+                        button.innerText = "Copied!";
+                        setTimeout( () => {
+                            button.innerText = "Copy";
+                        }
+                        , 3000);
+                    }
+                    ).catch( (err) => console.error("Could not copy text: ", err));
+                }
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
             async function handleFormSubmit(event) {
                 event.preventDefault();
                 event.stopImmediatePropagation();
@@ -807,6 +1108,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <script>
   // Optional: JavaScript for handling the transition when links are clicked
   // This script ensures the transition runs for same-origin links.
@@ -839,6 +1151,14 @@
 
 
 
-        
+
+
+
+
+
+
+
+
+
     </body>
 </html>
