@@ -11,7 +11,7 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
         <link href="https://cdn.prod.website-files.com/69d152126a180ac5bceefc29/css/olympusai.webflow.shared.fcb3d0095.css" rel="stylesheet" type="text/css" integrity="sha384-/LPQCVqplBQtSC7ydIobEjkoNxI2ii+BXQy3T2QubNXkV/Z1Zv6RN3hUI2Ubdra2" crossorigin="anonymous"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
 
 
 
@@ -39,7 +39,17 @@
         <style>
 
 
+/* Target iOS and mobile devices */
+@supports (-webkit-touch-callout: none) {
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+}
 
+/* Prevent zoom on select elements */
+select {
+    font-size: 16px !important;
+}
 
 
             /* Additional styles for phone detector - matching existing design exactly */
