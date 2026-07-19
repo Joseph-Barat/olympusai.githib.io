@@ -880,7 +880,6 @@
 
 
 
-
 <script>
     // ==== CONFIG ====
     const WEBHOOK_URL = 'https://hook.eu2.make.com/8ix7s8hwh167gmxuk87ch5o540iilx7a';
@@ -892,14 +891,12 @@
         turnstileToken = token;
     }
 
-    // Get the expected digit count for the currently selected country
     function getExpectedDigits() {
         const countrySelect = document.getElementById('countryCodeSelect');
         const selectedOption = countrySelect?.options[countrySelect.selectedIndex];
-        return parseInt(selectedOption?.getAttribute('data-digits'), 10) || 15; // fallback cap
+        return parseInt(selectedOption?.getAttribute('data-digits'), 10) || 15;
     }
 
-    // Enforce digit-only input, capped to the selected country's expected length
     function enforcePhoneDigitLimit() {
         const phoneInput = document.getElementById('Phone');
         if (!phoneInput) return;
@@ -907,7 +904,6 @@
         const maxDigits = getExpectedDigits();
         phoneInput.setAttribute('maxlength', maxDigits);
 
-        // Strip non-digits and truncate to max length
         let digitsOnly = phoneInput.value.replace(/\D/g, '');
         if (digitsOnly.length > maxDigits) {
             digitsOnly = digitsOnly.slice(0, maxDigits);
@@ -915,7 +911,6 @@
         phoneInput.value = digitsOnly;
     }
 
-    // Combine country code + phone digits into fullPhoneNumber whenever either changes
     function updateFullPhoneNumber() {
         const countrySelect = document.getElementById('countryCodeSelect');
         const phoneInput = document.getElementById('Phone');
@@ -945,11 +940,9 @@
         const errorMessage = document.querySelector('.error-message-3');
         const phoneInput = document.getElementById('Phone');
 
-        // Enforce digit limit + rebuild fullPhoneNumber right before submit
         enforcePhoneDigitLimit();
         updateFullPhoneNumber();
 
-        // Validate phone length matches the selected country (only if phone field is present/required)
         if (phoneInput && phoneInput.hasAttribute('required')) {
             const expectedDigits = getExpectedDigits();
             const actualDigits = phoneInput.value.replace(/\D/g, '').length;
@@ -967,17 +960,6 @@
         const fullPhone = document.getElementById('fullPhoneNumber')?.value || '';
         if (phoneInput && fullPhone) {
             phoneInput.value = fullPhone;
-        }
-
-        // Block submission if Turnstile widget is present but not yet solved
-        const turnstileWidget = document.querySelector('.cf-turnstile');
-        if (turnstileWidget && !turnstileToken) {
-            errorMessage.style.display = 'block';
-            successMessage.style.display = 'none';
-            errorMessage.querySelector('.text-block-25').textContent =
-                'Please complete the verification checkbox before submitting.';
-            errorMessage.scrollIntoView({ behavior: 'smooth' });
-            return;
         }
 
         try {
@@ -1041,7 +1023,6 @@
                 enforcePhoneDigitLimit();
                 updateFullPhoneNumber();
             });
-            // Set initial maxlength on page load based on default selected country
             enforcePhoneDigitLimit();
         }
 
